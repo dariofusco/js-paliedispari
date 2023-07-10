@@ -37,6 +37,35 @@ function randomNumber() {
 }
 
 
+const letterArray = []
+
+document.getElementById("check").addEventListener("click", function () {
+    const wordToCheck = document.getElementById("word-to-check").value
+    console.log(wordToCheck)
+
+    for (i = wordToCheck.length - 1; i >= 0; i--) {
+        const singleLetter = wordToCheck[i]
+        console.log(singleLetter)
+        letterArray.push(singleLetter)
+    }
+    
+    const reverseWord = letterArray.join("")
+    console.log(reverseWord)
+    
+    if (wordToCheck === reverseWord) {
+        console.log("si")
+        document.getElementById("answer").innerHTML = "Si!"
+    } else {
+        console.log("no")
+        document.getElementById("answer").innerHTML = "No!"
+    }
+
+});
+
+
+
+
+
 
 
 
