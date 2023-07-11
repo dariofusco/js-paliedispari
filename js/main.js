@@ -18,15 +18,7 @@ document.getElementById("send").addEventListener("click", function () {
 
     console.log(sum)
 
-    let results = ""
-
-    if (sum % 2 == 0) {
-        console.log("pari")
-        results = "pari"
-    } else {
-        console.log("dispari")
-        results = "dispari"
-    }
+    const results = evenNotEven(sum)
 
     console.log(results)
     console.log(selectResults)
@@ -39,6 +31,17 @@ document.getElementById("send").addEventListener("click", function () {
         document.getElementById("show-results").innerHTML = "Hai perso!"
     }
 });
+
+function evenNotEven (numberTocheck) {
+    if (numberTocheck % 2 == 0) {
+        console.log("pari")
+        results = "pari"
+    } else {
+        console.log("dispari")
+        results = "dispari"
+    }
+    return results
+}
 
 function randomNumber() {
     number = Math.round(Math.random() * 4) + 1;
