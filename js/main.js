@@ -11,9 +11,11 @@ document.getElementById("send").addEventListener("click", function () {
 
     console.log(sum)
 
+    let results = ""
+
     if (sum % 2 == 0) {
         console.log("pari")
-        let results = "pari"
+        results = "pari"
     } else {
         console.log("dispari")
         results = "dispari"
@@ -37,9 +39,10 @@ function randomNumber() {
 }
 
 
-const letterArray = []
+
 
 document.getElementById("check").addEventListener("click", function () {
+    const letterArray = []
     const wordToCheck = document.getElementById("word-to-check").value
     console.log(wordToCheck)
 
